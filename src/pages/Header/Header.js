@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../Hooks/useAuth';
 
@@ -18,6 +19,8 @@ const Header = () => {
                     <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
                     <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
                     <Nav.Link as={HashLink} to="/home#exparts">Exparts</Nav.Link>
+                    <Nav.Link as={Link} to="/addService">addService</Nav.Link>
+                    <Nav.Link as={Link} to="/serviceMenage">serviceMenagmant</Nav.Link>
                     {
                          user?.email?<Button variant="light" onClick={handleLogOut}>Logout</Button>: <Nav.Link as={HashLink} to="/login">Login</Nav.Link>
                     }

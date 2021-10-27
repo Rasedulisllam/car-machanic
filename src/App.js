@@ -9,6 +9,9 @@ import Booking from './pages/Booking/Booking';
 import Login from './pages/Login/Login/Login';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import AddService from './pages/AddService/AddService';
+import ServiceMenagmant from './pages/ServiceMenagmant/ServiceMenagmant';
+import UpdateService from './pages/UpdateService/UpdateService';
 
 function App() {
   return (
@@ -22,6 +25,15 @@ function App() {
             </Route>
             <Route  path='/home'>
               <Home></Home>
+            </Route>
+            <Route  path='/serviceMenage'>
+              <ServiceMenagmant></ServiceMenagmant>
+            </Route>
+            <Route  path='/updateService/:id'>
+              <UpdateService></UpdateService>
+            </Route>
+            <Route  path='/addService'>
+              <AddService></AddService>
             </Route>
             <PrivateRoute  path='/booking/:serviceId'>
               <Booking></Booking>
